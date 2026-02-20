@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEMATA | Ropa Urbana y Casual</title>
+    <title>DEMATA · Design Studio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header/Navegación -->
@@ -17,20 +17,26 @@
             <nav class="navbar">
                 <div class="logo">
                     <h1>DEMATA</h1>
+                    <span class="logo-cursive">design studio</span>
                 </div>
                 <div class="nav-links">
                     <a href="#inicio" class="active">Inicio</a>
-                    <a href="#catalogo">Catálogo</a>
+                    <a href="#catalogo">Colección</a>
                     <a href="#hombre">Hombre</a>
                     <a href="#mujer">Mujer</a>
                     <a href="#contacto">Contacto</a>
                 </div>
                 <div class="nav-icons">
-                    <a href="https://wa.me/5577206640" target="_blank" class="whatsapp-icon">
+                    <div class="social-header">
+                        <a href="https://instagram.com/demata_design" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <a href="https://wa.me/5523008727" target="_blank" class="whatsapp-icon">
                         <i class="fab fa-whatsapp"></i>
                         <span>Pedidos</span>
                     </a>
-                    <button class="admin-btn" id="adminBtn" onclick="accederPanelAdmin()" title="Panel de administración">
+                    <button class="admin-btn" id="adminBtn" onclick="accederPanelAdmin()" title="Panel">
                         <i class="fas fa-chart-line"></i>
                     </button>
                 </div>
@@ -43,12 +49,12 @@
         </div>
     </header>
 
-    <!-- Banner/Hero -->
+    <!-- Banner/Hero - Imagen fondo_playeras.jpeg -->
     <section class="hero" id="inicio">
         <div class="hero-content">
-            <h2>COLECCIÓN OTOÑO-INVIERNO 2026</h2>
-            <p>Estilo urbano con calidad premium</p>
-            <a href="#catalogo" class="btn-hero">Ver Colección</a>
+            <h2 class="hero-title">RACING INSPO</h2>
+            <p class="hero-subtitle">Colección primavera-verano 2026</p>
+            <a href="#catalogo" class="btn-hero">Ver colección</a>
         </div>
     </section>
 
@@ -56,339 +62,331 @@
     <section class="catalogo" id="catalogo">
         <div class="container">
             <div class="section-header">
-                <h2>Productos Destacados</h2>
-                <p>Descubre nuestras prendas más populares</p>
+                <h2>New collection</h2>
+                <p>Helmets · Apparel · Accessories</p>
             </div>
             
             <div class="filtros">
                 <button class="filtro-btn active" data-filter="all">Todos</button>
                 <button class="filtro-btn" data-filter="playeras">Playeras</button>
                 <button class="filtro-btn" data-filter="hoodies">Hoodies</button>
-                <button class="filtro-btn" data-filter="mujer">Mujer</button>
-                <button class="filtro-btn" data-filter="hombre">Hombre</button>
+                <button class="filtro-btn" data-filter="cascos">Cascos</button>
             </div>
             
             <div class="productos-grid">
                 <!-- PRODUCTO 1: Playera Negra Mujer -->
                 <div class="producto-card" data-categoria="playeras mujer" data-product-id="1" 
-                     data-product-name="Playera Negra Básica Mujer" 
-                     data-product-price="280"
+                     data-product-name="Playera Negra" 
+                     data-product-price="1280"
                      data-product-tallas="XS, S, M, L"
                      data-product-colores="Negro"
                      data-product-material="Algodón 100%"
                      data-product-caracteristicas="Corte regular, cuello redondo, estampado frontal">
                     <div class="producto-img">
-                        <img src="imagenes/PlayeraNegraM.jpeg" alt="Playera Negra Mujer">
-                        <div class="producto-badge">Nuevo</div>
+                        <img src="imagenes/PlayeraNegraM.jpeg" alt="Playera Negra">
                         <div class="producto-overlay">
-                            <button class="btn-ver" onclick="verDetallesProducto(1)">Ver Detalles</button>
+                            <button class="btn-ver" onclick="verDetallesProducto(1)">Ver detalles</button>
                         </div>
                     </div>
                     <div class="producto-info">
-                        <h3>Playera Negra Mujer</h3>
-                        <p class="producto-desc">Playera básica de algodón, ideal para looks casuales y cómodos.</p>
+                        <h3>Playera Negra</h3>
+                        <p class="producto-desc">Playera básica de algodón, ideal para looks casuales.</p>
                         <div class="producto-detalles">
-                            <span class="precio">$280 <span class="moneda">MXN</span></span>
-                            <span class="talla">Tallas: XS, S, M, L</span>
+                            <span class="precio">$1,280 <span class="moneda">MXN</span></span>
+                            <span class="talla">XS - L</span>
                         </div>
                         <button class="btn-comprar" onclick="pedirPorWhatsApp(1)">
-                            <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                            <i class="fab fa-whatsapp"></i> Pedir
                         </button>
                         <div class="producto-stats">
-                            <small><i class="fas fa-eye"></i> <span id="views-1">0</span> interesados</small>
+                            <small><span id="views-1">0</span> interesados</small>
                         </div>
                     </div>
                 </div>
 
                 <!-- PRODUCTO 2: Playera Negra Hombre 2 -->
                 <div class="producto-card" data-categoria="playeras hombre" data-product-id="2" 
-                     data-product-name="Playera Negra Estampada Hombre" 
-                     data-product-price="300"
+                     data-product-name="Playera Estampada" 
+                     data-product-price="1350"
                      data-product-tallas="S, M, L, XL"
                      data-product-colores="Negro"
                      data-product-material="Algodón peinado"
-                     data-product-caracteristicas="Estampado frontal, manga corta, tela premium">
+                     data-product-caracteristicas="Estampado frontal, manga corta">
                     <div class="producto-img">
-                        <img src="imagenes/PlayeraNegraH2.jpeg" alt="Playera Negra Hombre 2">
-                        <div class="producto-badge">Más Vendido</div>
+                        <img src="imagenes/PlayeraNegraH2.jpeg" alt="Playera Estampada">
                         <div class="producto-overlay">
-                            <button class="btn-ver" onclick="verDetallesProducto(2)">Ver Detalles</button>
+                            <button class="btn-ver" onclick="verDetallesProducto(2)">Ver detalles</button>
                         </div>
                     </div>
                     <div class="producto-info">
-                        <h3>Playera Negra Estampada H</h3>
-                        <p class="producto-desc">Playera con diseño moderno, perfecta para el día a día.</p>
+                        <h3>Playera Estampada</h3>
+                        <p class="producto-desc">Playera con diseño exclusivo de la colección.</p>
                         <div class="producto-detalles">
-                            <span class="precio">$300 <span class="moneda">MXN</span></span>
-                            <span class="talla">Tallas: S, M, L, XL</span>
+                            <span class="precio">$1,350 <span class="moneda">MXN</span></span>
+                            <span class="talla">S - XL</span>
                         </div>
                         <button class="btn-comprar" onclick="pedirPorWhatsApp(2)">
-                            <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                            <i class="fab fa-whatsapp"></i> Pedir
                         </button>
                         <div class="producto-stats">
-                            <small><i class="fas fa-eye"></i> <span id="views-2">0</span> interesados</small>
+                            <small><span id="views-2">0</span> interesados</small>
                         </div>
                     </div>
                 </div>
 
                 <!-- PRODUCTO 3: Playera Negra Hombre -->
                 <div class="producto-card" data-categoria="playeras hombre" data-product-id="3" 
-                     data-product-name="Playera Negra Básica Hombre" 
-                     data-product-price="250"
+                     data-product-name="Playera Básica" 
+                     data-product-price="1250"
                      data-product-tallas="S, M, L, XL"
                      data-product-colores="Negro"
                      data-product-material="Algodón 100%"
-                     data-product-caracteristicas="Corte clásico, cuello redondo, tela suave">
+                     data-product-caracteristicas="Corte clásico, cuello redondo">
                     <div class="producto-img">
-                        <img src="imagenes/PlayeraNegraH.jpeg" alt="Playera Negra Hombre">
+                        <img src="imagenes/PlayeraNegraH.jpeg" alt="Playera Básica">
                         <div class="producto-overlay">
-                            <button class="btn-ver" onclick="verDetallesProducto(3)">Ver Detalles</button>
+                            <button class="btn-ver" onclick="verDetallesProducto(3)">Ver detalles</button>
                         </div>
                     </div>
                     <div class="producto-info">
-                        <h3>Playera Negra Básica H</h3>
+                        <h3>Playera Básica</h3>
                         <p class="producto-desc">Playera esencial de guardarropa, versátil y cómoda.</p>
                         <div class="producto-detalles">
-                            <span class="precio">$250 <span class="moneda">MXN</span></span>
-                            <span class="talla">Tallas: S, M, L, XL</span>
+                            <span class="precio">$1,250 <span class="moneda">MXN</span></span>
+                            <span class="talla">S - XL</span>
                         </div>
                         <button class="btn-comprar" onclick="pedirPorWhatsApp(3)">
-                            <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                            <i class="fab fa-whatsapp"></i> Pedir
                         </button>
                         <div class="producto-stats">
-                            <small><i class="fas fa-eye"></i> <span id="views-3">0</span> interesados</small>
+                            <small><span id="views-3">0</span> interesados</small>
                         </div>
                     </div>
                 </div>
 
                 <!-- PRODUCTO 4: Playera Oversize Hombre -->
                 <div class="producto-card" data-categoria="playeras hombre" data-product-id="4" 
-                     data-product-name="Playera Oversize Hombre" 
-                     data-product-price="320"
+                     data-product-name="Playera Oversize" 
+                     data-product-price="1420"
                      data-product-tallas="M, L, XL, XXL"
-                     data-product-colores="Negro, Gris, Blanco"
+                     data-product-colores="Negro, Gris"
                      data-product-material="Algodón oversize"
-                     data-product-caracteristicas="Corte oversize, manga larga, estilo urbano">
+                     data-product-caracteristicas="Corte oversize, estilo urbano">
                     <div class="producto-img">
-                        <img src="imagenes/PlayeraOversizeH.jpeg" alt="Playera Oversize Hombre">
-                        <div class="producto-badge">Oferta</div>
+                        <img src="imagenes/PlayeraOversizeH.jpeg" alt="Playera Oversize">
                         <div class="producto-overlay">
-                            <button class="btn-ver" onclick="verDetallesProducto(4)">Ver Detalles</button>
+                            <button class="btn-ver" onclick="verDetallesProducto(4)">Ver detalles</button>
                         </div>
                     </div>
                     <div class="producto-info">
-                        <h3>Playera Oversize Hombre</h3>
-                        <p class="producto-desc">Playera de corte moderno oversize, ideal para looks streetwear.</p>
+                        <h3>Playera Oversize</h3>
+                        <p class="producto-desc">Playera de corte oversize, ideal para looks streetwear.</p>
                         <div class="producto-detalles">
-                            <span class="precio">$320 <span class="moneda">MXN</span></span>
-                            <span class="talla">Tallas: M, L, XL, XXL</span>
+                            <span class="precio">$1,420 <span class="moneda">MXN</span></span>
+                            <span class="talla">M - XXL</span>
                         </div>
                         <button class="btn-comprar" onclick="pedirPorWhatsApp(4)">
-                            <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                            <i class="fab fa-whatsapp"></i> Pedir
                         </button>
                         <div class="producto-stats">
-                            <small><i class="fas fa-eye"></i> <span id="views-4">0</span> interesados</small>
+                            <small><span id="views-4">0</span> interesados</small>
                         </div>
                     </div>
                 </div>
 
                 <!-- PRODUCTO 5: Playera Rayo Mujer -->
                 <div class="producto-card" data-categoria="playeras mujer" data-product-id="5" 
-                     data-product-name="Playera con Estampado Rayo Mujer" 
-                     data-product-price="290"
+                     data-product-name="Playera Rayo" 
+                     data-product-price="1290"
                      data-product-tallas="XS, S, M"
-                     data-product-colores="Negro con blanco"
-                     data-product-material="Algodón mezclilla"
-                     data-product-caracteristicas="Estampado rayo, corte femenino, tela ligera">
+                     data-product-colores="Negro"
+                     data-product-material="Algodón"
+                     data-product-caracteristicas="Estampado rayo, corte femenino">
                     <div class="producto-img">
-                        <img src="imagenes/PlayeraRayoM.jpeg" alt="Playera Rayo Mujer">
-                        <div class="producto-badge">Nuevo</div>
+                        <img src="imagenes/PlayeraRayoM.jpeg" alt="Playera Rayo">
                         <div class="producto-overlay">
-                            <button class="btn-ver" onclick="verDetallesProducto(5)">Ver Detalles</button>
+                            <button class="btn-ver" onclick="verDetallesProducto(5)">Ver detalles</button>
                         </div>
                     </div>
                     <div class="producto-info">
-                        <h3>Playera Rayo Mujer</h3>
-                        <p class="producto-desc">Playera con diseño de rayo, estilo juvenil y moderno.</p>
+                        <h3>Playera Rayo</h3>
+                        <p class="producto-desc">Playera con diseño de rayo, estilo juvenil.</p>
                         <div class="producto-detalles">
-                            <span class="precio">$290 <span class="moneda">MXN</span></span>
-                            <span class="talla">Tallas: XS, S, M</span>
+                            <span class="precio">$1,290 <span class="moneda">MXN</span></span>
+                            <span class="talla">XS - M</span>
                         </div>
                         <button class="btn-comprar" onclick="pedirPorWhatsApp(5)">
-                            <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                            <i class="fab fa-whatsapp"></i> Pedir
                         </button>
                         <div class="producto-stats">
-                            <small><i class="fas fa-eye"></i> <span id="views-5">0</span> interesados</small>
+                            <small><span id="views-5">0</span> interesados</small>
                         </div>
                     </div>
                 </div>
 
                 <!-- PRODUCTO 6: Playera Blanca Mujer 2 -->
                 <div class="producto-card" data-categoria="playeras mujer" data-product-id="6" 
-                     data-product-name="Playera Blanca Estampada Mujer" 
-                     data-product-price="270"
+                     data-product-name="Playera Blanca" 
+                     data-product-price="1270"
                      data-product-tallas="XS, S, M, L"
                      data-product-colores="Blanco"
                      data-product-material="Algodón orgánico"
-                     data-product-caracteristicas="Estampado minimalista, tela respirable, lavado fácil">
+                     data-product-caracteristicas="Estampado minimalista, tela suave">
                     <div class="producto-img">
-                        <img src="imagenes/PlayeraBlancaM2.jpeg" alt="Playera Blanca Mujer 2">
+                        <img src="imagenes/PlayeraBlancaM2.jpeg" alt="Playera Blanca">
                         <div class="producto-overlay">
-                            <button class="btn-ver" onclick="verDetallesProducto(6)">Ver Detalles</button>
+                            <button class="btn-ver" onclick="verDetallesProducto(6)">Ver detalles</button>
                         </div>
                     </div>
                     <div class="producto-info">
-                        <h3>Playera Blanca Estampada M</h3>
-                        <p class="producto-desc">Playera blanca con estampado delicado, perfecta para verano.</p>
+                        <h3>Playera Blanca</h3>
+                        <p class="producto-desc">Playera blanca con estampado delicado.</p>
                         <div class="producto-detalles">
-                            <span class="precio">$270 <span class="moneda">MXN</span></span>
-                            <span class="talla">Tallas: XS, S, M, L</span>
+                            <span class="precio">$1,270 <span class="moneda">MXN</span></span>
+                            <span class="talla">XS - L</span>
                         </div>
                         <button class="btn-comprar" onclick="pedirPorWhatsApp(6)">
-                            <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                            <i class="fab fa-whatsapp"></i> Pedir
                         </button>
                         <div class="producto-stats">
-                            <small><i class="fas fa-eye"></i> <span id="views-6">0</span> interesados</small>
+                            <small><span id="views-6">0</span> interesados</small>
                         </div>
                     </div>
                 </div>
 
                 <!-- PRODUCTO 7: Playera Blanca Mujer -->
                 <div class="producto-card" data-categoria="playeras mujer" data-product-id="7" 
-                     data-product-name="Playera Blanca Básica Mujer" 
-                     data-product-price="240"
+                     data-product-name="Playera Blanca Básica" 
+                     data-product-price="1240"
                      data-product-tallas="XS, S, M, L"
                      data-product-colores="Blanco"
                      data-product-material="Algodón 100%"
-                     data-product-caracteristicas="Básica, versátil, combinable con todo">
+                     data-product-caracteristicas="Básica, versátil">
                     <div class="producto-img">
-                        <img src="imagenes/PlayeraBlancaM.jpeg" alt="Playera Blanca Mujer">
-                        <div class="producto-badge">Básico</div>
+                        <img src="imagenes/PlayeraBlancaM.jpeg" alt="Playera Blanca Básica">
                         <div class="producto-overlay">
-                            <button class="btn-ver" onclick="verDetallesProducto(7)">Ver Detalles</button>
+                            <button class="btn-ver" onclick="verDetallesProducto(7)">Ver detalles</button>
                         </div>
                     </div>
                     <div class="producto-info">
-                        <h3>Playera Blanca Básica M</h3>
-                        <p class="producto-desc">Playera blanca esencial, imprescindible en cualquier guardarropa.</p>
+                        <h3>Playera Blanca</h3>
+                        <p class="producto-desc">Playera blanca esencial, imprescindible.</p>
                         <div class="producto-detalles">
-                            <span class="precio">$240 <span class="moneda">MXN</span></span>
-                            <span class="talla">Tallas: XS, S, M, L</span>
+                            <span class="precio">$1,240 <span class="moneda">MXN</span></span>
+                            <span class="talla">XS - L</span>
                         </div>
                         <button class="btn-comprar" onclick="pedirPorWhatsApp(7)">
-                            <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                            <i class="fab fa-whatsapp"></i> Pedir
                         </button>
                         <div class="producto-stats">
-                            <small><i class="fas fa-eye"></i> <span id="views-7">0</span> interesados</small>
+                            <small><span id="views-7">0</span> interesados</small>
                         </div>
                     </div>
                 </div>
 
                 <!-- PRODUCTO 8: Hoodie Rosa Hombre -->
                 <div class="producto-card" data-categoria="hoodies hombre" data-product-id="8" 
-                     data-product-name="Hoodie Rosa Hombre" 
-                     data-product-price="450"
+                     data-product-name="Hoodie Rosa" 
+                     data-product-price="2150"
                      data-product-tallas="S, M, L, XL"
                      data-product-colores="Rosa pastel"
                      data-product-material="Algodón fleece"
-                     data-product-caracteristicas="Capucha con cordón, bolsillo canguro, tela suave">
+                     data-product-caracteristicas="Capucha con cordón">
                     <div class="producto-img">
-                        <img src="imagenes/HoddieRosaH.jpeg" alt="Hoodie Rosa Hombre">
-                        <div class="producto-badge">Tendencia</div>
+                        <img src="imagenes/HoddieRosaH.jpeg" alt="Hoodie Rosa">
                         <div class="producto-overlay">
-                            <button class="btn-ver" onclick="verDetallesProducto(8)">Ver Detalles</button>
+                            <button class="btn-ver" onclick="verDetallesProducto(8)">Ver detalles</button>
                         </div>
                     </div>
                     <div class="producto-info">
-                        <h3>Hoodie Rosa Hombre</h3>
-                        <p class="producto-desc">Hoodie en color rosa pastel, ideal para looks modernos y frescos.</p>
+                        <h3>Hoodie Rosa</h3>
+                        <p class="producto-desc">Hoodie en color rosa pastel, diseño exclusivo.</p>
                         <div class="producto-detalles">
-                            <span class="precio">$450 <span class="moneda">MXN</span></span>
-                            <span class="talla">Tallas: S, M, L, XL</span>
+                            <span class="precio">$2,150 <span class="moneda">MXN</span></span>
+                            <span class="talla">S - XL</span>
                         </div>
                         <button class="btn-comprar" onclick="pedirPorWhatsApp(8)">
-                            <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                            <i class="fab fa-whatsapp"></i> Pedir
                         </button>
                         <div class="producto-stats">
-                            <small><i class="fas fa-eye"></i> <span id="views-8">0</span> interesados</small>
+                            <small><span id="views-8">0</span> interesados</small>
                         </div>
                     </div>
                 </div>
 
                 <!-- PRODUCTO 9: Hoodie Beige Mujer -->
                 <div class="producto-card" data-categoria="hoodies mujer" data-product-id="9" 
-                     data-product-name="Hoodie Beige Mujer" 
-                     data-product-price="420"
+                     data-product-name="Hoodie Beige" 
+                     data-product-price="2220"
                      data-product-tallas="XS, S, M"
-                     data-product-colores="Beige, Gris claro"
-                     data-product-material="Mezcla algodón-poliéster"
-                     data-product-caracteristicas="Corte ajustado, capucha forrada, mangas largas">
+                     data-product-colores="Beige"
+                     data-product-material="Algodón"
+                     data-product-caracteristicas="Corte ajustado">
                     <div class="producto-img">
-                        <img src="imagenes/HoddieBeigeM.jpeg" alt="Hoodie Beige Mujer">
-                        <div class="producto-badge">Limitado</div>
+                        <img src="imagenes/HoddieBeigeM.jpeg" alt="Hoodie Beige">
                         <div class="producto-overlay">
-                            <button class="btn-ver" onclick="verDetallesProducto(9)">Ver Detalles</button>
+                            <button class="btn-ver" onclick="verDetallesProducto(9)">Ver detalles</button>
                         </div>
                     </div>
                     <div class="producto-info">
-                        <h3>Hoodie Beige Mujer</h3>
-                        <p class="producto-desc">Hoodie beige de corte femenino, perfecto para días fríos con estilo.</p>
+                        <h3>Hoodie Beige</h3>
+                        <p class="producto-desc">Hoodie beige de corte femenino.</p>
                         <div class="producto-detalles">
-                            <span class="precio">$420 <span class="moneda">MXN</span></span>
-                            <span class="talla">Tallas: XS, S, M</span>
+                            <span class="precio">$2,220 <span class="moneda">MXN</span></span>
+                            <span class="talla">XS - M</span>
                         </div>
                         <button class="btn-comprar" onclick="pedirPorWhatsApp(9)">
-                            <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                            <i class="fab fa-whatsapp"></i> Pedir
                         </button>
                         <div class="producto-stats">
-                            <small><i class="fas fa-eye"></i> <span id="views-9">0</span> interesados</small>
+                            <small><span id="views-9">0</span> interesados</small>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="ver-mas">
-                <a href="#" class="btn-ver-mas">Ver Todo el Catálogo <i class="fas fa-arrow-right"></i></a>
+                <a href="#" class="btn-ver-mas">Ver colección completa <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- Sección de Contacto -->
+    <!-- Sección de Contacto - Imagen creative_department.jpeg -->
     <section class="contacto" id="contacto">
         <div class="container">
             <div class="contacto-grid">
                 <div class="contacto-info">
-                    <h2>Haz tu Pedido</h2>
-                    <p>Consulta disponibilidad, tallas y realiza tus pedidos directamente por WhatsApp.</p>
+                    <h2>Proyectos globales</h2>
+                    <p>Colaboraciones · Merch · Diseño de cascos</p>
                     <div class="contacto-datos">
                         <div class="contacto-item">
                             <i class="fab fa-whatsapp"></i>
                             <div>
                                 <h4>WhatsApp</h4>
-                                <p>55 7720 6640</p>
+                                <p>55 2300 8727</p>
                             </div>
                         </div>
                         <div class="contacto-item">
                             <i class="far fa-clock"></i>
                             <div>
-                                <h4>Horario de Atención</h4>
-                                <p>Lunes a Sábado: 10:00 - 20:00 hrs</p>
+                                <h4>Horario</h4>
+                                <p>Lun - Sáb: 10:00 - 20:00</p>
                             </div>
                         </div>
                         <div class="contacto-item">
-                            <i class="fas fa-truck"></i>
+                            <i class="fas fa-map-marker-alt"></i>
                             <div>
-                                <h4>Envíos</h4>
-                                <p>CDMX y área metropolitana</p>
+                                <h4>CDMX</h4>
+                                <p>Mexico City</p>
                             </div>
                         </div>
                     </div>
-                    <a href="https://wa.me/5577206640" target="_blank" class="btn-contacto">
-                        <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+                    <a href="https://wa.me/5523008727" target="_blank" class="btn-contacto">
+                        <i class="fab fa-whatsapp"></i> Contactar
                     </a>
                 </div>
                 <div class="contacto-img">
-                    <!-- Imagen decorativa -->
+                    <!-- Imagen creative_department.jpeg -->
                 </div>
             </div>
         </div>
@@ -400,30 +398,33 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <h2>DEMATA</h2>
-                    <p>Ropa urbana con estilo y calidad</p>
+                    <p>Design Studio · Helmets · Apparel</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/5577206640" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com/demata_design" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5523008727" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="footer-links">
                     <h3>Categorías</h3>
+                    <a href="#cascos">Cascos</a>
                     <a href="#playeras">Playeras</a>
                     <a href="#hoodies">Hoodies</a>
-                    <a href="#hombre">Hombre</a>
-                    <a href="#mujer">Mujer</a>
+                    <a href="#boots">Boots</a>
                 </div>
                 <div class="footer-info">
-                    <h3>Información</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Ciudad de México</p>
-                    <p><i class="fas fa-phone"></i> 55 7720 6640</p>
-                    <p><i class="far fa-envelope"></i> contacto@demata.com</p>
+                    <h3>Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Mexico City</p>
+                    <p><i class="fas fa-phone"></i> 55 2300 8727</p>
+                    <p><i class="far fa-envelope"></i> studio@demata.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 DEMATA. Todos los derechos reservados.</p>
-                <p>Página creada para pedidos por WhatsApp</p>
+                <p>&copy; 2026 DEMATA · Design Studio</p>
+                <p>Helmets · Apparel · Brand Design</p>
             </div>
         </div>
     </footer>
@@ -441,38 +442,36 @@
     <!-- Panel de Administración -->
     <div class="admin-panel" id="adminPanel">
         <div class="admin-header">
-            <h3><i class="fas fa-chart-line"></i> Panel de Intereses</h3>
+            <h3><i class="fas fa-chart-line"></i> Panel</h3>
             <button class="admin-close" id="adminClose">&times;</button>
         </div>
         <div class="admin-content">
             <div class="admin-stats">
                 <div class="stat-card">
-                    <h4>Productos Vistos</h4>
+                    <h4>Vistas</h4>
                     <p class="stat-number" id="totalViews">0</p>
                 </div>
                 <div class="stat-card">
-                    <h4>Intereses Totales</h4>
+                    <h4>Intereses</h4>
                     <p class="stat-number" id="totalInterests">0</p>
                 </div>
                 <div class="stat-card">
-                    <h4>Producto Más Visto</h4>
+                    <h4>Top</h4>
                     <p class="stat-text" id="mostViewed">-</p>
                 </div>
             </div>
             
             <div class="interests-list">
-                <h4>Productos Más Interesantes</h4>
-                <div id="interestsList">
-                    <!-- Lista de intereses se carga aquí -->
-                </div>
+                <h4>Productos más vistos</h4>
+                <div id="interestsList"></div>
             </div>
             
             <div class="admin-actions">
                 <button class="btn-admin" onclick="exportarIntereses()">
-                    <i class="fas fa-download"></i> Exportar Datos
+                    <i class="fas fa-download"></i> Exportar
                 </button>
                 <button class="btn-admin primary" onclick="enviarReporteWhatsApp()">
-                    <i class="fab fa-whatsapp"></i> Enviar Reporte
+                    <i class="fab fa-whatsapp"></i> Reporte
                 </button>
             </div>
         </div>
@@ -481,23 +480,21 @@
     <!-- Modal de Login -->
     <div class="login-modal" id="loginModal">
         <div class="login-container">
-            <h3><i class="fas fa-lock"></i> Acceso Administrador</h3>
-            <p>Ingresa la contraseña para ver los intereses de los clientes</p>
-            <input type="password" id="adminPassword" placeholder="Contraseña" autocomplete="off">
+            <h3><i class="fas fa-lock"></i> Studio access</h3>
+            <p>Ingresa la contraseña para ver el panel</p>
+            <input type="password" id="adminPassword" placeholder="Contraseña">
             <div class="login-actions">
                 <button class="btn-login" onclick="verificarPassword()">Acceder</button>
                 <button class="btn-cancel" onclick="cerrarLogin()">Cancelar</button>
             </div>
-            <p class="login-hint">Solo el vendedor tiene acceso a esta información</p>
         </div>
     </div>
 
     <!-- Botón flotante de WhatsApp -->
-    <a href="https://wa.me/5577206640" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5523008727" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
