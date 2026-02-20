@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEMATA · Design Studio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header/Navegación -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <h1>DEMATA</h1>
+                    <span class="logo-cursive">design studio</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#inicio" class="active">Inicio</a>
+                    <a href="#catalogo">Colección</a>
+                    <a href="#hombre">Hombre</a>
+                    <a href="#mujer">Mujer</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+                <div class="nav-icons">
+                    <div class="social-header">
+                        <a href="https://instagram.com/demata_design" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <a href="https://wa.me/5523008727" target="_blank" class="whatsapp-icon">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Pedidos</span>
+                    </a>
+                    <button class="admin-btn" id="adminBtn" onclick="accederPanelAdmin()" title="Panel">
+                        <i class="fas fa-chart-line"></i>
+                    </button>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner/Hero - fondo_playeras.jpeg -->
+    <section class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="hero-title">RACING INSPO</h2>
+            <p class="hero-subtitle">Colección primavera-verano 2026</p>
+            <a href="#catalogo" class="btn-hero">Ver colección</a>
+        </div>
+    </section>
+
+    <!-- Catálogo de Productos -->
+    <section class="catalogo" id="catalogo">
+        <div class="container">
+            <div class="section-header">
+                <h2>New collection</h2>
+                <p>Helmets · Apparel · Accessories</p>
+            </div>
+            
+            <div class="filtros">
+                <button class="filtro-btn active" data-filter="all">Todos</button>
+                <button class="filtro-btn" data-filter="chamarras">Chamarras</button>
+                <button class="filtro-btn" data-filter="playeras">Playeras</button>
+                <button class="filtro-btn" data-filter="hoodies">Hoodies</button>
+            </div>
+            
+            <div class="productos-grid">
+                <!-- ===== CHAMARRAS ===== -->
+                <!-- CHAMARRA 1 -->
+                <div class="producto-card" data-categoria="chamarras" data-product-id="10" 
+                     data-product-name="Chamarra Columbia" 
+                     data-product-price="3450"
+                     data-product-tallas="S, M, L"
+                     data-product-colores="Negro, Verde militar"
+                     data-product-material="Nylon técnico"
+                     data-product-caracteristicas="Impermeable, rompevientos, logo bordado Columbia Vestment Company">
+                    <div class="producto-img">
+                        <img src="imagenes/Chamarra1.png" alt="Chamarra Columbia">
+                        <div class="producto-overlay">
+                            <button class="btn-ver" onclick="verDetallesProducto(10)">Ver detalles</button>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Chamarra Columbia</h3>
+                        <p class="producto-desc">Chamarra técnica Columbia Vestment Company, impermeable y rompevientos.</p>
+                        <div class="producto-detalles">
+                            <span class="precio">$3,450 <span class="moneda">MXN</span></span>
+                            <span class="talla">S, M, L</span>
+                        </div>
+                        <button class="btn-comprar" onclick="pedirPorWhatsApp(10)">
+                            <i class="fab fa-whatsapp"></i> Pedir
+                        </button>
+                        <div class="producto-stats">
+                            <small><span id="views-10">0</span> interesados</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CHAMARRA 2 -->
+                <div class="producto-card" data-categoria="chamarras" data-product-id="11" 
+                     data-product-name="Chamarra Columbia Specialist" 
+                     data-product-price="3750"
+                     data-product-tallas="S, M, L, XL"
+                     data-product-colores="Negro, Gris"
+                     data-product-material="Nylon impermeable"
+                     data-product-caracteristicas="Chamarra especialista, multiple bolsillos, capucha desmontable">
+                    <div class="producto-img">
+                        <img src="imagenes/Chamarra2.png" alt="Chamarra Columbia Specialist">
+                        <div class="producto-overlay">
+                            <button class="btn-ver" onclick="verDetallesProducto(11)">Ver detalles</button>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Chamarra Specialist</h3>
+                        <p class="producto-desc">Chamarra Columbia Specialist Company, diseño técnico con múltiples bolsillos.</p>
+                        <div class="producto-detalles">
+                            <span class="precio">$3,750 <span class="moneda">MXN</span></span>
+                            <span class="talla">S - XL</span>
+                        </div>
+                        <button class="btn-comprar" onclick="pedirPorWhatsApp(11)">
+                            <i class="fab fa-whatsapp"></i> Pedir
+                        </button>
+                        <div class="producto-stats">
+                            <small><span id="views-11">0</span> interesados</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== PLAYERAS MUJER ===== -->
+                <!-- Playera Negra M -->
+                <div class="producto-card" data-categoria="playeras mujer" data-product-id="1" 
+                     data-product-name="Playera Negra" 
+                     data-product-price="1280"
+                     data-product-tallas="XS, S, M, L"
+                     data-product-colores="Negro"
+                     data-product-material="Algodón 100%"
+                     data-product-caracteristicas="Corte regular, cuello redondo, estampado frontal">
+                    <div class="producto-img">
+                        <img src="imagenes/PlayeraNegraM.jpeg" alt="Playera Negra">
+                        <div class="producto-overlay">
+                            <button class="btn-ver" onclick="verDetallesProducto(1)">Ver detalles</button>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Playera Negra</h3>
+                        <p class="producto-desc">Playera básica de algodón, ideal para looks casuales.</p>
+                        <div class="producto-detalles">
+                            <span class="precio">$1,280 <span class="moneda">MXN</span></span>
+                            <span class="talla">XS - L</span>
+                        </div>
+                        <button class="btn-comprar" onclick="pedirPorWhatsApp(1)">
+                            <i class="fab fa-whatsapp"></i> Pedir
+                        </button>
+                        <div class="producto-stats">
+                            <small><span id="views-1">0</span> interesados</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Playera Rayo M -->
+                <div class="producto-card" data-categoria="playeras mujer" data-product-id="5" 
+                     data-product-name="Playera Rayo" 
+                     data-product-price="1290"
+                     data-product-tallas="XS, S, M"
+                     data-product-colores="Negro"
+                     data-product-material="Algodón"
+                     data-product-caracteristicas="Estampado rayo, corte femenino">
+                    <div class="producto-img">
+                        <img src="imagenes/PlayeraRayoM.jpeg" alt="Playera Rayo">
+                        <div class="producto-overlay">
+                            <button class="btn-ver" onclick="verDetallesProducto(5)">Ver detalles</button>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Playera Rayo</h3>
+                        <p class="producto-desc">Playera con diseño de rayo, estilo juvenil.</p>
+                        <div class="producto-detalles">
+                            <span class="precio">$1,290 <span class="moneda">MXN</span></span>
+                            <span class="talla">XS - M</span>
+                        </div>
+                        <button class="btn-comprar" onclick="pedirPorWhatsApp(5)">
+                            <i class="fab fa-whatsapp"></i> Pedir
+                        </button>
+                        <div class="producto-stats">
+                            <small><span id="views-5">0</span> interesados</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Playera Blanca M (presentación 1) -->
+                <div class="producto-card" data-categoria="playeras mujer" data-product-id="6" 
+                     data-product-name="Playera Blanca - Style 1" 
+                     data-product-price="1270"
+                     data-product-tallas="XS, S, M, L"
+                     data-product-colores="Blanco"
+                     data-product-material="Algodón orgánico"
+                     data-product-caracteristicas="Estampado minimalista, tela suave, presentación clásica">
+                    <div class="producto-img">
+                        <img src="imagenes/PlayeraBlancaM2.jpeg" alt="Playera Blanca Style 1">
+                        <div class="producto-overlay">
+                            <button class="btn-ver" onclick="verDetallesProducto(6)">Ver detalles</button>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Playera Blanca</h3>
+                        <p class="producto-desc">Playera blanca con estampado delicado - Presentación 1.</p>
+                        <div class="producto-detalles">
+                            <span class="precio">$1,270 <span class="moneda">MXN</span></span>
+                            <span class="talla">XS - L</span>
+                        </div>
+                        <button class="btn-comprar" onclick="pedirPorWhatsApp(6)">
+                            <i class="fab fa-whatsapp"></i> Pedir
+                        </button>
+                        <div class="producto-stats">
+                            <small><span id="views-6">0</span> interesados</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Playera Blanca M (presentación 2) -->
+                <div class="producto-card" data-categoria="playeras mujer" data-product-id="7" 
+                     data-product-name="Playera Blanca - Style 2" 
+                     data-product-price="1270"
+                     data-product-tallas="XS, S, M, L"
+                     data-product-colores="Blanco"
+                     data-product-material="Algodón 100%"
+                     data-product-caracteristicas="Mismo modelo, presentación alternativa, estilo versátil">
+                    <div class="producto-img">
+                        <img src="imagenes/PlayeraBlancaM.jpeg" alt="Playera Blanca Style 2">
+                        <div class="producto-overlay">
+                            <button class="btn-ver" onclick="verDetallesProducto(7)">Ver detalles</button>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Playera Blanca</h3>
+                        <p class="producto-desc">Playera blanca esencial - Presentación 2, misma calidad.</p>
+                        <div class="producto-detalles">
+                            <span class="precio">$1,270 <span class="moneda">MXN</span></span>
+                            <span class="talla">XS - L</span>
+                        </div>
+                        <button class="btn-comprar" onclick="pedirPorWhatsApp(7)">
+                            <i class="fab fa-whatsapp"></i> Pedir
+                        </button>
+                        <div class="producto-stats">
+                            <small><span id="views-7">0</span> interesados</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== PLAYERAS HOMBRE ===== -->
+                <!-- Playera Negra H2 -->
+                <div class="producto-card" data-categoria="playeras hombre" data-product-id="2" 
+                     data-product-name="Playera Estampada" 
+                     data-product-price="1350"
+                     data-product-tallas="S, M, L, XL"
+                     data-product-colores="Negro"
+                     data-product-material="Algodón peinado"
+                     data-product-caracteristicas="Estampado frontal exclusivo">
+                    <div class="producto-img">
+                        <img src="imagenes/PlayeraNegraH2.jpeg" alt="Playera Estampada">
+                        <div class="producto-overlay">
+                            <button class="btn-ver" onclick="verDetallesProducto(2)">Ver detalles</button>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Playera Estampada</h3>
+                        <p class="producto-desc">Playera con diseño exclusivo de la colección.</p>
+                        <div class="producto-detalles">
+                            <span class="precio">$1,350 <span class="moneda">MXN</span></span>
+                            <span class="talla">S - XL</span>
+                        </div>
+                        <button class="btn-comprar" onclick="pedirPorWhatsApp(2)">
+                            <i class="fab fa-whatsapp"></i> Pedir
+                        </button>
+                        <div class="producto-stats">
+                            <small><span id="views-2">0</span> interesados</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Playera Negra H -->
+                <div class="producto-card" data-categoria="playeras hombre" data-product-id="3" 
+                     data-product-name="Playera Básica" 
+                     data-product-price="1250"
+                     data-product-tallas="S, M, L, XL"
+                     data-product-colores="Negro"
+                     data-product-material="Algodón 100%"
+                     data-product-caracteristicas="Corte clásico, cuello redondo">
+                    <div class="producto-img">
+                        <img src="imagenes/PlayeraNegraH.jpeg" alt="Playera Básica">
+                        <div class="producto-overlay">
+                            <button class="btn-ver" onclick="verDetallesProducto(3)">Ver detalles</button>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Playera Básica</h3>
+                        <p class="producto-desc">Playera esencial de guardarropa, versátil y cómoda.</p>
+                        <div class="producto-detalles">
+                            <span class="precio">$1,250 <span class="moneda">MXN</span></span>
+                            <span class="talla">S - XL</span>
+                        </div>
+                        <button class="btn-comprar" onclick="pedirPorWhatsApp(3)">
+                            <i class="fab fa-whatsapp"></i> Pedir
+                        </button>
+                        <div class="producto-stats">
+                            <small><span id="views-3">0</span> interesados</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Playera Oversize H -->
+                <div class="producto-card" data-categoria="playeras hombre" data-product-id="4" 
+                     data-product-name="Playera Oversize" 
+                     data-product-price="1420"
+                     data-product-tallas="M, L, XL, XXL"
+                     data-product-colores="Negro, Gris"
+                     data-product-material="Algodón oversize"
+                     data-product-caracteristicas="Corte oversize, estilo urbano">
+                    <div class="producto-img">
+                        <img src="imagenes/PlayeraOversizeH.jpeg" alt="Playera Oversize">
+                        <div class="producto-overlay">
+                            <button class="btn-ver" onclick="verDetallesProducto(4)">Ver detalles</button>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Playera Oversize</h3>
+                        <p class="producto-desc">Playera de corte oversize, ideal para looks streetwear.</p>
+                        <div class="producto-detalles">
+                            <span class="precio">$1,420 <span class="moneda">MXN</span></span>
+                            <span class="talla">M - XXL</span>
+                        </div>
+                        <button class="btn-comprar" onclick="pedirPorWhatsApp(4)">
+                            <i class="fab fa-whatsapp"></i> Pedir
+                        </button>
+                        <div class="producto-stats">
+                            <small><span id="views-4">0</span> interesados</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== HOODIES ===== -->
+                <!-- Hoodie Rosa H -->
+                <div class="producto-card" data-categoria="hoodies hombre" data-product-id="8" 
+                     data-product-name="Hoodie Rosa" 
+                     data-product-price="2150"
+                     data-product-tallas="S, M, L, XL"
+                     data-product-colores="Rosa pastel"
+                     data-product-material="Algodón fleece"
+                     data-product-caracteristicas="Capucha con cordón">
+                    <div class="producto-img">
+                        <img src="imagenes/HoddieRosaH.jpeg" alt="Hoodie Rosa">
+                        <div class="producto-overlay">
+                            <button class="btn-ver" onclick="verDetallesProducto(8)">Ver detalles</button>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Hoodie Rosa</h3>
+                        <p class="producto-desc">Hoodie en color rosa pastel, diseño exclusivo.</p>
+                        <div class="producto-detalles">
+                            <span class="precio">$2,150 <span class="moneda">MXN</span></span>
+                            <span class="talla">S - XL</span>
+                        </div>
+                        <button class="btn-comprar" onclick="pedirPorWhatsApp(8)">
+                            <i class="fab fa-whatsapp"></i> Pedir
+                        </button>
+                        <div class="producto-stats">
+                            <small><span id="views-8">0</span> interesados</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hoodie Beige M -->
+                <div class="producto-card" data-categoria="hoodies mujer" data-product-id="9" 
+                     data-product-name="Hoodie Beige" 
+                     data-product-price="2220"
+                     data-product-tallas="XS, S, M"
+                     data-product-colores="Beige"
+                     data-product-material="Algodón"
+                     data-product-caracteristicas="Corte ajustado">
+                    <div class="producto-img">
+                        <img src="imagenes/HoddieBeigeM.jpeg" alt="Hoodie Beige">
+                        <div class="producto-overlay">
+                            <button class="btn-ver" onclick="verDetallesProducto(9)">Ver detalles</button>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Hoodie Beige</h3>
+                        <p class="producto-desc">Hoodie beige de corte femenino.</p>
+                        <div class="producto-detalles">
+                            <span class="precio">$2,220 <span class="moneda">MXN</span></span>
+                            <span class="talla">XS - M</span>
+                        </div>
+                        <button class="btn-comprar" onclick="pedirPorWhatsApp(9)">
+                            <i class="fab fa-whatsapp"></i> Pedir
+                        </button>
+                        <div class="producto-stats">
+                            <small><span id="views-9">0</span> interesados</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ver-mas">
+                <a href="#" class="btn-ver-mas">Ver colección completa <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto - creative_department.jpeg -->
+    <section class="contacto" id="contacto">
+        <div class="container">
+            <div class="contacto-grid">
+                <div class="contacto-info">
+                    <h2>Creative Department</h2>
+                    <p>Demata Design · Proyectos globales</p>
+                    <div class="contacto-datos">
+                        <div class="contacto-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>55 2300 8727</p>
+                            </div>
+                        </div>
+                        <div class="contacto-item">
+                            <i class="far fa-clock"></i>
+                            <div>
+                                <h4>Horario</h4>
+                                <p>Lun - Sáb: 10:00 - 20:00</p>
+                            </div>
+                        </div>
+                        <div class="contacto-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>CDMX</h4>
+                                <p>Mexico City</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/5523008727" target="_blank" class="btn-contacto">
+                        <i class="fab fa-whatsapp"></i> Contactar
+                    </a>
+                </div>
+                <div class="contacto-img">
+                    <!-- Imagen creative_department.jpeg como fondo -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>DEMATA</h2>
+                    <p>Design Studio · Helmets · Apparel</p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/demata_design" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5523008727" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Categorías</h3>
+                    <a href="#chamarras">Chamarras</a>
+                    <a href="#playeras">Playeras</a>
+                    <a href="#hoodies">Hoodies</a>
+                    <a href="#accesorios">Accesorios</a>
+                </div>
+                <div class="footer-info">
+                    <h3>Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Mexico City</p>
+                    <p><i class="fas fa-phone"></i> 55 2300 8727</p>
+                    <p><i class="far fa-envelope"></i> studio@demata.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 DEMATA · Design Studio</p>
+                <p>Helmets · Apparel · Brand Design</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Detalles del Producto (CORREGIDO) -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-container" id="modalContainer">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-content" id="modalContent">
+                <!-- El contenido se carga dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Panel de Administración -->
+    <div class="admin-panel" id="adminPanel">
+        <div class="admin-header">
+            <h3><i class="fas fa-chart-line"></i> Studio Panel</h3>
+            <button class="admin-close" id="adminClose">&times;</button>
+        </div>
+        <div class="admin-content">
+            <div class="admin-stats">
+                <div class="stat-card">
+                    <h4>Vistas</h4>
+                    <p class="stat-number" id="totalViews">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Intereses</h4>
+                    <p class="stat-number" id="totalInterests">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Top</h4>
+                    <p class="stat-text" id="mostViewed">-</p>
+                </div>
+            </div>
+            
+            <div class="interests-list">
+                <h4>Productos más vistos</h4>
+                <div id="interestsList"></div>
+            </div>
+            
+            <div class="admin-actions">
+                <button class="btn-admin" onclick="exportarIntereses()">
+                    <i class="fas fa-download"></i> Exportar
+                </button>
+                <button class="btn-admin primary" onclick="enviarReporteWhatsApp()">
+                    <i class="fab fa-whatsapp"></i> Reporte
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Login -->
+    <div class="login-modal" id="loginModal">
+        <div class="login-container">
+            <h3><i class="fas fa-lock"></i> Studio access</h3>
+            <p>Ingresa la contraseña para ver el panel</p>
+            <input type="password" id="adminPassword" placeholder="Contraseña">
+            <div class="login-actions">
+                <button class="btn-login" onclick="verificarPassword()">Acceder</button>
+                <button class="btn-cancel" onclick="cerrarLogin()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5523008727" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
